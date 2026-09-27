@@ -1,49 +1,49 @@
-## Section 1: Target Audience & Market Focus
+# Section 1: Target Audience & Market Focus
 
 **Primary Persona:**  
-University of Sindh undergraduate/postgraduate students (across all academic departments), alumni, faculty, and staff.
+Laptop owners, tech enthusiasts, students, professionals, and gamers seeking to personalize and protect their laptops.
 
 **User Profile:**  
-Mobile-first users seeking affordable, official university-branded gear (clothing, stationery, accessories) that represents both the main university identity and their specific department or major (e.g., Computer Science, Business Administration, Fine Arts).
+Mobile-first shoppers looking for high-quality, durable, precision-cut laptop skins that reflect their personal aesthetic, hobbies, or profession while safeguarding their devices from scratches and daily wear.
 
 **Core Pain Point:**  
-No online platform exists to buy official University of Sindh merchandise. Students must physically visit campus vendors or local markets with limited stock, inconsistent pricing, and no options for specialized department-branded apparel or gear.
+Most available laptop skins suffer from poor vinyl quality, inaccurate dimensions, messy adhesive residue upon removal, or limited design choices. Customers struggle to find custom, high-fit skins tailored to their exact device model.
 
 **Domain Scope:**  
-**Vertical Market:** Campus Retail & E-Commerce (Apparel, Accessories, and Academic Stationery).
+**Vertical Market:** Tech Accessories & E-Commerce (Custom Laptop Skins & Device Decals).
 
 **Catalog Focus:**  
-* **University-Wide Gear:** Main University of Sindh branded hoodies, backpacks, water bottles, and stationery.
-* **Department-Specific Collections:** Custom-designed merchandise tailored for individual departments (e.g., "Computer Science" hoodies, department logos, specialized notebook covers, and major-specific accessories).
-
+* **Standard & Aesthetic Collections:** Minimalist textures (carbon fiber, matte, metallic), artistic patterns, pop culture graphics, and professional finish options.
+* **Custom & Personalized Skins:** Custom image uploads, personalized text, and major-specific or profession-themed graphics (e.g., developer code snippets, graphic design artwork, minimal business styles).
 
 ## Section 2: Minimum Viable Product (MVP) Feature Scope
 
-The Minimum Viable Product (MVP) focuses on essential user workflows required for browsing, filtering by department, selecting, purchasing, and managing University of Sindh merchandise within the academic semester project scope.
+The Minimum Viable Product (MVP) focuses on essential user workflows required for browsing, filtering by device model and design series, customizing, purchasing, and managing laptop skins within the academic semester project scope.
 
 | Category | Feature Name | Description | Priority |
 | :--- | :--- | :--- | :--- |
-| **Authentication** | User Registration & Authentication | Secure user sign-up, login, and session handling using password hashing and JWT-based authentication. Supports student profile creation with department selection. | High (MVP) |
-| **Catalog** | Product Browsing & Department Filtering | Interactive product catalog displaying clothing, accessories, and stationery with filtering options for general university gear vs. specific departments (e.g., Computer Science, Business). | High (MVP) |
-| **Cart** | Cart Management | Persistent shopping cart allowing users to add, update quantities, view subtotal costs, and remove items before checking out. | High (MVP) |
-| **Checkout** | Order Processing & Checkout | Multi-step checkout process with shipping/pickup detail collection, order summary calculation, and payment processing (Stripe Sandbox / Mock API). | High (MVP) |
-| **Order Tracking** | Order History & Status | User dashboard enabling buyers to view past purchases and monitor real-time order status (e.g., Pending, Processing, Shipped). | High (MVP) |
-| **Admin** | Inventory & Department Control | Administrative interface for store managers to perform CRUD operations (Create, Read, Update, Delete) on products, department categories, and stock levels. | Medium |
+| **Authentication** | User Registration & Authentication | Secure user sign-up, login, and session handling using password hashing and JWT-based authentication. Supports profile creation and device preference saving. | High (MVP) |
+| **Catalog** | Product Browsing & Model Filtering | Interactive catalog displaying skin collections (Minimalist, Carbon Fiber, Pop Culture, Professional) with filtering options by laptop brand and specific device model (e.g., MacBook, Dell XPS, HP Pavilion). | High (MVP) |
+| **Customization** | Skin Customization & Preview | Interactive skin selector allowing users to choose finish options (Matte, Gloss, Textured), select specific laptop models, and upload custom artwork or personal text. | High (MVP) |
+| **Cart** | Cart Management | Persistent shopping cart allowing users to add skins, specify device model fit, update quantities, view subtotal costs, and remove items before checking out. | High (MVP) |
+| **Checkout** | Order Processing & Checkout | Multi-step checkout process with shipping detail collection, order summary calculation, and payment processing (Stripe Sandbox / Mock API). | High (MVP) |
+| **Order Tracking** | Order History & Status | User dashboard enabling buyers to view past purchases, device models ordered, and real-time order status (e.g., Pending, Printing, Shipped). | High (MVP) |
+| **Admin** | Inventory & Catalog Control | Administrative interface for store managers to perform CRUD operations (Create, Read, Update, Delete) on skin designs, device model compatibility lists, and stock levels. | Medium |
 
 
 ## Section 3: Tech Stack Selection & Justification
 
 ### Frontend Framework: HTML, CSS, JavaScript (Bootstrap)
 * **Selected Technology**: HTML5, CSS3, JavaScript (Vanilla / Bootstrap)
-* **Justification**: Using core web technologies alongside Bootstrap allows for dynamic responsive UI design without the setup overhead or complex build configurations of modern JavaScript frameworks. It enables rapid layout development and direct DOM manipulation for cart actions, department-based filtering, and interactive product search, making it ideal for fast, lightweight deployment.
+* **Justification**: Using core web technologies alongside Bootstrap allows for dynamic responsive UI design without the setup overhead or complex build configurations of modern JavaScript frameworks. It enables rapid layout development and direct DOM manipulation for cart actions, device model filtering, finish selection, and interactive product search, making it ideal for fast, lightweight deployment.
 
 ### Backend Infrastructure: Node.js with Express
 * **Selected Technology**: Node.js / Express.js
-* **Justification**: Node.js offers a highly performant, non-blocking I/O event-driven engine perfectly suited for asynchronous web requests like cart operations and inventory updates. Express minimalizes backend overhead by providing an intuitive setup for RESTful routing and API construction, simplifying backend development compared to heavier alternatives.
+* **Justification**: Node.js offers a highly performant, non-blocking I/O event-driven engine perfectly suited for asynchronous web requests like cart operations, device compatibility checks, and inventory updates. Express minimizes backend overhead by providing an intuitive setup for RESTful routing and API construction, simplifying backend development compared to heavier alternatives.
 
 ### Database Management System: MongoDB (NoSQL)
 * **Selected Technology**: MongoDB
-* **Justification**: MongoDB provides a flexible, document-oriented schema that stores product catalogs, department tags, user accounts, and cart data as JSON-like documents, allowing seamless integration with JavaScript backend objects. Its dynamic structure simplifies frequent adjustments to product metadata and department-specific variations without requiring complex migration scripts.
+* **Justification**: MongoDB provides a flexible, document-oriented schema that stores product catalogs, laptop model dimensions, finish metadata, user accounts, and cart data as JSON-like documents, allowing seamless integration with JavaScript backend objects. Its dynamic structure simplifies frequent adjustments to product metadata and laptop skin texture/model variations without requiring complex migration scripts.
 
 ### Authentication & Payment Integration
 * **Authentication**: JSON Web Tokens (JWT) for lightweight, stateless session management and secure user identity verification.
@@ -54,14 +54,15 @@ The Minimum Viable Product (MVP) focuses on essential user workflows required fo
 ## Section 4: Entity-Relationship Diagram (ERD)
 
 ### Database Schema Overview
-The relational schema models the core entities required for the e-commerce platform: user authentication, product catalog categorization, department tagging, shopping cart management, and order transaction handling[cite: 1].
+The relational schema models the core entities required for the laptop skins e-commerce platform: user authentication, product catalog categorization, laptop device model compatibility, finish/texture options, shopping cart management, and order transaction handling.
 
 ```mermaid
 erDiagram
     USERS ||--o{ ORDERS : places
     USERS ||--o{ CART : owns
-    DEPARTMENTS ||--o{ PRODUCTS : tags
+    DEVICE_MODELS ||--o{ PRODUCTS : fits
     CATEGORIES ||--o{ PRODUCTS : categorizes
+    FINISHES ||--o{ PRODUCTS : offers
     PRODUCTS ||--o{ ORDER_ITEMS : included_in
     PRODUCTS ||--o{ CART_ITEMS : contains
     ORDERS ||--|{ ORDER_ITEMS : consists_of
@@ -72,15 +73,16 @@ erDiagram
         string full_name
         string email
         string password_hash
-        string department
+        string default_device_model
         string role
         string created_at
     }
 
-    DEPARTMENTS {
+    DEVICE_MODELS {
         int id PK
-        string name
-        string code
+        string brand
+        string model_name
+        string screen_size
     }
 
     CATEGORIES {
@@ -89,10 +91,17 @@ erDiagram
         string description
     }
 
+    FINISHES {
+        int id PK
+        string finish_type
+        string texture_description
+    }
+
     PRODUCTS {
         int id PK
         int category_id FK
-        int department_id FK
+        int device_model_id FK
+        int finish_id FK
         string title
         string description
         decimal price
